@@ -3,141 +3,21 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; /* Ensures full vertical centering */
-  background: linear-gradient(to bottom, #f0f4f8, #d9e6f2);
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .calendar {
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
-  max-width: 900px;
-  min-height: 550px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 1000px;
+  min-height: 600px;
 }
 
-.calendar:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for small screens */
 @media (max-width: 768px) {
   .calendar {
-    border-radius: 15px;
-    margin: 0 15px;
-    min-height: 450px;
-    max-width: 95%; /* Use most of the screen width */
+    border-radius: 12px;
+    margin: 0 10px;
   }
-}
-
-/* Additional styling for headers */
-.calendarHeader {
-  background: linear-gradient(45deg, #4a90e2, #007aff);
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-
-.calendarHeader button {
-  background: white;
-  border: none;
-  border-radius: 50%;
-  color: #007aff;
-  font-size: 1rem;
-  padding: 10px;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.calendarHeader button:hover {
-  background: #f0f4f8;
-  transform: scale(1.1);
-}
-
-/* Grid styling */
-.calendarGrid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days */
-  gap: 5px;
-  padding: 20px;
-}
-
-.calendarGrid .day {
-  background: #f9fafb;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.calendarGrid .day:hover {
-  background: #e6f0fa;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.calendarGrid .day.today {
-  background: #007aff;
-  color: white;
-  font-weight: bold;
-}
-
-.calendarGrid .day.hasEvent {
-  border: 2px solid #007aff;
-}
-
-/* Modal styling */
-.eventModal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  width: 80%;
-  max-width: 500px;
-  padding: 20px;
-  z-index: 1000;
-}
-
-.eventModal h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  color: #007aff;
-}
-
-.eventModal button.close {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #333;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.eventModal button.close:hover {
-  color: #007aff;
-}
-
-/* Overlay for modal */
-.eventModalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
 }
